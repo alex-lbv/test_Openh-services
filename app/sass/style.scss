@@ -1,0 +1,38 @@
+//  Components
+@import 'components/_variables';
+@import 'components/_vendor';
+@import 'components/_scaffolding';
+@import 'components/_button';
+@import 'components/_card';
+@import 'components/_background-section';
+
+//  Page-section
+
+//  Header :
+@import 'page/_header';
+
+//  Main :
+@import 'page/_main';
+@import 'page/_main-header';
+@import 'page/_features';
+@import 'page/_statistics';
+@import 'page/_example';
+@import 'page/_slider-example';
+@import 'page/_consult';
+@import 'page/_photo';
+@import 'page/_slider-photo';
+@import 'page/_video';
+@import 'page/_slider-video';
+@import 'page/_sale';
+@import 'page/_reviews';
+@import 'page/_gallery-reviews';
+@import 'page/_order';
+@import 'page/_services';
+@import 'page/_advices';
+@import 'page/_post';
+
+
+//  Footer :
+@import 'page/_links';
+@import 'page/_adaptive';
+@import 'page/_copyright';

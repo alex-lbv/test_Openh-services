@@ -1,0 +1,146 @@
+.example {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    &__container {
+        display: flex;
+    }
+
+    &__title-wrap {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin: 0;
+
+        font-weight: 500;
+        font-size: 32px;
+        color: $black;
+    }
+
+    &__text-wrap {
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        margin: 0;
+
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 30px;
+
+        color: $black;
+	}
+
+	&__button-wrap--mobile {
+		display: none;
+	}
+
+	&__button-wrap {
+		width: 100%;
+	}
+
+	&__button {
+		width: 100%;
+		max-width: 285px;
+	}
+}
+
+// mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .example {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        &__title-wrap {
+            margin-bottom: 15px;
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__text-wrap {
+            margin-bottom: 0;
+        }
+
+        &__text {
+            font-size: 15px;
+            line-height: 26px;
+		}
+
+        &__button-wrap {
+			display: none;
+		}
+
+		&__button-wrap--mobile {
+			padding-right: 15px;
+			padding-top: 30px;
+
+			display: flex;
+			justify-content: center;
+
+            width: 100%;
+		}
+
+        &__button {
+            max-width: 450px;
+        }
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1279px) {
+    .example {
+        padding-top: 0;
+		padding-bottom: 55px;
+
+		background-color: #fafafa;
+
+        &__container {
+			padding: 0;
+        }
+
+        &__content {
+            text-align: center;
+        }
+
+        &__title-wrap {
+            margin-bottom: 25px;
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text-wrap {
+            margin-bottom: 0;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__button-wrap {
+			display: none;
+		}
+
+		&__button-wrap--mobile {
+			display: flex;
+			justify-content: flex-end;
+			flex: 1;
+		}
+
+        &__button {
+            width: 285px;
+        }
+    }
+}

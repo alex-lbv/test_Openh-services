@@ -1,0 +1,594 @@
+.video {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__container  {
+        padding-left: 10px;
+    }
+
+	&__content {
+		flex-direction: row-reverse;
+    }
+
+    &__description {
+        padding-left: 50px;
+        padding-right: 0;
+        margin-right: 15px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 50px;
+    }
+
+    &__title-wrap {
+        margin-right: 50px;
+    }
+
+    &__title {
+        margin: 0;
+
+        font-weight: 500;
+        font-size: 44px;
+        letter-spacing: 0.01em;
+        color: $black;
+    }
+
+    &__time-wrap {
+        position: relative;
+    }
+
+    &__time {
+        display: inline-block;
+
+        padding: 5px 0;
+        padding-left: 55px;
+        padding-right: 25px;
+        border-radius: 30px;
+
+        font-weight: 500;
+        font-size: 22px;
+        color: $dark-blue-3;
+        border: 1px solid #1F6397;
+    }
+
+    &__time::before {
+        position: absolute;
+        content: "";
+
+        left: 20px;
+        top: 10px;
+
+        width: 20px;
+        height: 22px;
+
+        background-image: url("../img/main_photo-calendar.svg");
+        background-repeat: no-repeat;
+	}
+
+	&__list-wrap {
+		padding-bottom: 40px;
+
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+    &__list {
+        position: relative;
+        padding-left: 70px;
+        margin: 0;
+
+        counter-reset: myCounter;
+    }
+
+    &__list::after {
+        position: absolute;
+		content: "";
+
+        left: -292px;
+		top: 0;
+
+        width: 100%;
+        height: 380px;
+
+        background-image: url("../img/main_photo-dotted.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+		z-index: 1;
+
+		@media (min-width: 1290px) {
+			left: -297px;
+		}
+	}
+
+    &__item {
+        position: relative;
+
+        margin-bottom: 30px;
+
+        list-style: none;
+	}
+
+    &__item:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__item::before {
+        position: absolute;
+        left: -70px;
+        transform: translateY(-3px);
+
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        display: inline-block;
+
+        padding: 3px 15px;
+
+        text-align: center;
+        height: auto;
+        width: auto;
+
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 34px;
+        color: $white;
+
+        border-radius: 50%;
+
+        background-color: #7FB1D8;
+        z-index: 2;
+    }
+
+    &__item-text {
+        margin: 0;
+
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 32px;
+
+        color: $black;
+    }
+
+    &__item-text-bold {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+
+        color: $black;
+	}
+
+	&__footer {
+        margin-left: -15px;
+
+		display: flex;
+	}
+
+	&__recommendation {
+		display: flex;
+		align-items: center;
+
+        padding-top: 20px;
+        padding-bottom: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: -20px;
+
+        max-width: 585px;
+
+        border-radius: 5px;
+		background-color: $light-blue;
+	}
+
+	&__recommendation-image-wrap {
+		margin-right: 25px;
+	}
+
+	&__recommendation-text {
+		font-size: 22px;
+		color: $black;
+	}
+
+    &__price {
+        display: flex;
+        align-items: baseline;
+
+        margin-top: 40px;
+		margin-left: 85px;
+		padding-left: 27px;
+		margin-left: 0;
+		padding-top: 0;
+
+		width: 595px;
+
+		border: none;
+	}
+
+	&__price-top {
+        padding-left: 20px;
+
+		position: relative;
+		display: flex;
+		align-items: center
+	}
+
+    &__price-top::before {
+        position: absolute;
+        content: "";
+
+		width: 100%;
+		height: 1px;
+
+    	top: 50px;
+
+        background-image: url("../img/main_photo-dotted-black.svg");
+		background-repeat: repeat;
+		z-index: 0;
+    }
+
+    &__price-text-wrap {
+        margin-right: 70px;
+    }
+
+    &__price-text {
+        position: relative;
+        display: inline-block;
+
+        padding-right: 11px;
+
+        font-weight: 500;
+        font-size: 32px;
+		color: $gray;
+
+		background-color: #f5f5f5;
+    }
+
+    &__price-number {
+		position: relative;
+    	padding-right: 20px;
+
+        font-weight: bold;
+        font-size: 48px;
+		color: $black;
+
+		background-color: #f5f5f5;
+    }
+
+    &__button-wrap {
+		position: relative;
+
+        align-self: flex-start;
+    }
+
+    &__button {
+        width: 210px;
+    }
+
+    &__slider-wrap {
+        padding: 0;
+
+        max-width: 580px;
+	}
+
+	&__toggles {
+		margin-right: 5px;
+	}
+}
+
+// mobile
+@media (min-width: 320px) and (max-width: 767px) {
+	.video {
+		padding-top: 45px;
+        padding-bottom: 20px;
+
+        &__container {
+            padding-left: 0;
+        }
+
+        &__description {
+            margin: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+		}
+
+		&__header {
+			margin-bottom: 25px;
+		}
+
+        &__title-wrap {
+            margin-right: 15px;
+        }
+
+		&__title {
+			font-size: 22px;
+		}
+
+		&__time {
+            padding: 5px 9px 5px 45px;
+
+            font-size: 16px;
+		}
+
+		&__time::before {
+			top: 5px;
+			left: 15px;
+		}
+
+		&__list-wrap {
+			padding-bottom: 0;
+
+			border-bottom: none;
+		}
+
+		&__list {
+			padding-left: 45px;
+			padding-bottom: 0;
+		}
+
+		&__list::after {
+			left: -43%;
+
+            height: 82%;
+
+            @media (min-width: 400px) and (max-width: 539px) {
+                left: -45%;
+            }
+
+            @media (min-width: 540px) and (max-width: 767px) {
+                left: -46%;
+            }
+		}
+
+		&__item {
+			margin-bottom: 20px;
+			padding-left: 10px;
+		}
+
+		&__item::before {
+			left: -45px;
+		}
+
+		&__item-text {
+			font-size: 15px;
+		}
+
+		&__item-text-bold {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        &__footer {
+            margin-left: 0;
+
+            flex-direction: column-reverse;
+        }
+
+        &__recommendation {
+			padding: 20px 10px;
+			margin-top: 40px;
+        }
+
+        &__recommendation-image {
+            display: none;
+        }
+
+        &__recommendation-text-wrap {
+            text-align: center;
+        }
+
+        &__recommendation-text {
+            font-size: 18px;
+        }
+
+		&__price {
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            padding: 0;
+			padding-top: 20px;
+            margin: 0;
+
+            width: 100%;
+        }
+
+		&__price-top {
+            padding-left: 0;
+			margin-bottom: 30px;
+		}
+
+		&__price-top::before {
+            top: 25px;
+            left: 74px;
+
+            width: 150px;
+            height: 1px;
+
+            background-image: url("../img/main_photo-dotted-black-mobile.svg");
+		}
+
+        &__price-text-wrap {
+            margin-right: 155px;
+        }
+
+		&__price-text {
+            padding-right: 5px;
+
+            font-size: 24px;
+        }
+
+		&__price-number {
+			margin: 0;
+			padding-right: 0;
+
+			font-size: 24px;
+		}
+
+		&__button-wrap {
+			display: flex;
+    		justify-content: center;
+
+			width: 100%;
+		}
+
+		&__button {
+			width: 100%;
+			max-width: 450px;
+		}
+
+		&__slider-wrap {
+            margin: 0;
+            margin-top: 40px;
+            padding: 0 15px;
+		}
+
+		&__toggles {
+            margin-right: 0;
+        }
+	}
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1279px) {
+	.video {
+		padding-top: 80px;
+        padding-bottom: 0;
+
+        &__container-wrap {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        &__content {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        &__description {
+            padding: 0;
+            margin: 0;
+		}
+
+		&__header {
+			margin-bottom: 40px;
+		}
+
+		&__title-wrap {
+			margin-right: 25px;
+		}
+
+		&__title {
+			font-size: 32px;
+		}
+
+		&__time {
+			padding: 5px 25px 5px 45px;
+
+			font-size: 18px;
+		}
+
+		&__time::before {
+			top: 5px;
+		}
+
+		&__list-wrap {
+			padding-bottom: 0;
+
+			border-bottom: none;
+		}
+
+        &__list {
+            padding-right: 110px;
+        }
+
+        &__list::after {
+            left: -335px;
+
+            height: 90%;
+
+            @media (min-width: 992px) and (max-width: 1279px) {
+                left: -358px;
+            }
+        }
+
+		&__item-text {
+			font-size: 18px;
+		}
+
+		&__item-text-bold {
+			font-size: 18px;
+			font-weight: 600;
+        }
+
+        &__slider-wrap {
+            margin: 0;
+            margin-top: 50px;
+
+            max-width: none;
+        }
+
+        &__price {
+            margin: 0;
+            padding-left: 0;
+            padding-top: 30px;
+
+            width: 100%;
+        }
+
+        &__price-number {
+            padding-left: 20px;
+        }
+
+        &__price-top {
+            padding-left: 0;
+		}
+
+		&__price-top::before {
+            top: 50px;
+			left: 100px;
+
+    		width: 215px;
+            height: 1px;
+
+            background-image: url("../img/main_photo-dotted-black-mobile.svg");
+		}
+
+        &__price-text-wrap {
+            margin-right: 200px;
+            margin-left: -15px;
+        }
+
+        &__price-text {
+            padding-right: 20px;
+        }
+
+        &__footer {
+            margin-left: 0;
+
+            flex-direction: column-reverse;
+        }
+
+        &__recommendation {
+            position: relative;
+            left: -25px;
+
+            margin-top: 60px;
+
+            width: 106%;
+
+            max-width: none;
+		}
+
+		&__recommendation-text {
+			font-size: 20px;
+			line-height: 32px;
+		}
+
+        &__button {
+            width: 230px;
+		}
+
+		&__toggles {
+            margin-right: 0;
+        }
+	}
+}

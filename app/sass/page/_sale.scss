@@ -1,0 +1,225 @@
+.sale {
+    padding-bottom: 50px;
+
+    &__container-wrap {
+        position: relative;
+        width: 100%;
+
+        border-radius: 10px;
+
+        background-image: url("../img/main_sale-bg.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &__container-wrap::before {
+        position: absolute;
+        content: "";
+
+        min-height: 100%;
+        width: 100%;
+
+        border-radius: 10px;
+
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background-size: 100%;
+    }
+
+    &__container {
+        position: relative;
+        padding-top: 55px;
+        padding-bottom: 80px;
+        padding-left: 50px;
+    }
+
+    &__form-title-wrap {
+        margin-bottom: 30px;
+    }
+
+    &__form-title {
+        margin: 0;
+
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 58px;
+        letter-spacing: 0.01em;
+        color: $white;
+    }
+
+    &__form-content {
+      position: relative;
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 30px;
+    }
+
+    &__form-input {
+        padding: 20px 15px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+
+        width: 238px;
+
+        font-weight: 300;
+        font-size: 15px;
+        color: $black;
+
+        border: 1px solid #D5D5D5;
+        border-radius: 2px;
+    }
+
+    &__form-input:focus {
+        outline: 2px solid $yellow;
+    }
+
+    &__form-label {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+
+        font-weight: 300;
+        font-size: 15px;
+        color: $gray;
+
+        pointer-events: none;
+        transition: all .3s;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.1, 0.99);
+        transition-delay: 0s;
+    }
+
+    &__form-input:focus ~ &__form-label, &__form-input:valid ~ &__form-label {
+        top: 10px;
+        font-size: 13px;
+    }
+
+    &__form-button-wrap {
+        margin-left: -2px;
+    }
+
+    &__form-button {
+        padding: 22px 15px;
+        padding-bottom: 21px;
+
+        width: 225px;
+
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        border: none;
+    }
+
+    &__form-text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: $white;
+    }
+}
+
+// mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .sale {
+        padding-bottom: 40px;
+
+        &__container {
+            padding-top: 100px;
+            padding-bottom: 20px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        &__container-wrap {
+            width: 100%;
+
+            border-radius: 10px;
+
+            background-image: url("../img/main_sale-bg-mobile.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__container-wrap::before {
+            display: none;
+        }
+
+        &__form-title {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &__form-content {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            margin-bottom: 15px;
+        }
+
+        &__form-input-wrap,
+        &__form-button-wrap {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        &__form-input,
+        &__form-button {
+            width: 100%;
+		}
+
+		&__form-label {
+			left: 30px;
+		}
+
+        &__form-button {
+            margin: 0;
+        }
+
+        &__form-input-wrap {
+            margin-bottom: 10px;
+        }
+
+        &__form-text {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1279px) {
+    .sale {
+		padding-top: 40px;
+		padding-bottom: 60px;
+
+        &__container {
+            padding-top: 30px;
+            padding-bottom: 45px;
+            padding-left: 30px;
+        }
+
+        &__form-content {
+            margin-bottom: 10px;
+        }
+
+        &__form-title-wrap {
+            margin-bottom: 20px;
+        }
+
+        &__form-title {
+            font-size: 24px;
+            line-height: 32px;
+		}
+
+		&__form-text {
+			font-size: 14px;
+		}
+    }
+}

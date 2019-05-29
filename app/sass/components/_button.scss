@@ -1,0 +1,70 @@
+.button {
+	display: inline-block;
+	letter-spacing: 0.1em;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &--yellow {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        width: 100%;
+
+        text-align: center;
+        color: $white;
+        border-radius: 2px;
+        text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 400;
+
+        background-color: $button;
+
+        &:hover {
+            color: $white;
+            background-color: $button-hover;
+        }
+    }
+
+    &--advices-transparent {
+        padding: 7px 25px;
+
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $dark-blue-3;
+        border: 1px solid $dark-blue-3;
+        border-radius: 2px;
+
+        &:hover {
+            color: $white;
+            background-color: $dark-blue-3;
+        }
+    }
+
+    &--footer-transparent {
+        padding: 7px 25px;
+
+        font-weight: 500;
+        font-size: 9px;
+        line-height: normal;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        color: $yellow;
+        border: 1px solid $yellow;
+        border-radius: 2px;
+
+        &:hover {
+            color: $white;
+            background-color: $yellow;
+        }
+    }
+}

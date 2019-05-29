@@ -1,0 +1,45 @@
+//  color
+$white: #ffffff;
+$black: #2E2E2E;
+$gray: #A1A1A1;
+$dark-gray: #696969;
+$light-gray: #E1E1E1;
+$yellow: #FFC816;
+$dark-blue: #073C64;
+$dark-blue-2: #084472;
+$dark-blue-3: #1F6397;
+$dim-gray: rgba(255, 255, 255, 0.56);
+$light-blue: #E9F1F7;
+$green: #43BF73;
+
+//  section
+$bg: $white;
+$border: #f0f0f0;
+$border-features: #E5E5E5;
+$border-checkbox: #D5D5D5;
+$bg-footer-links: #F7F7F7;
+$border-photo-list: #E0E0E0;
+$button: $yellow;
+$bg-example: linear-gradient(180deg, #F3F3F3 0%, #FFFFFF 100%);
+$bg-photo: linear-gradient(180deg, #F6F6F6 0%, #FFFFFF 57.23%);
+$bg-video: linear-gradient(180deg, #F6F6F6 0%, #FFFFFF 57.23%, #FAFAFA 97.79%);
+$bg-logo-card-2: #ECEBE9;
+$link-hover: rgb(130, 166, 194);
+$button-hover: #ffdb66;
+$bg-btn-slider: #f8f8f8;
+$bg-arrow: #c4c4c4;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1280px
+    );
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 768px,
+  xl: 1260px
+);

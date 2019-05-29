@@ -1,0 +1,16 @@
+.gallery-reviews {
+    display: flex;
+
+    &__small-image-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: min-content;
+    }
+
+    &__image {
+        height: 100%;
+        margin-right: 5px;
+    }
+}

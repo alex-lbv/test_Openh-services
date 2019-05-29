@@ -1,0 +1,306 @@
+.order {
+    padding: 0;
+    padding-top: 85px;
+
+    &__container-wrap {
+        background-image: url("../img/main_order-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 810px;
+    }
+
+    &__content {
+        position: relative;
+        top: -85px;
+
+        padding: 70px 15px 55px 15px;
+
+        text-align: center;
+
+        border: 1px solid $light-gray;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: $white;
+    }
+
+    &__form {
+        max-width: 390px;
+        margin: 0 auto;
+    }
+
+    &__title-wrap {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin: 0;
+
+        font-weight: 500;
+        font-size: 42px;
+        letter-spacing: 0.01em;
+        color: $black;
+    }
+
+    &__header-text-wrap {
+        margin-bottom: 35px;
+    }
+
+    &__header-text {
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        color: $dark-gray;
+    }
+
+    &__footer-text {
+        font-weight: 300;
+        font-size: 14px;
+        color: $dark-gray;
+    }
+
+    &__footer-text-link {
+        color: $dark-blue-3;
+    }
+
+    &__button-wrap {
+        margin-bottom: 20px;
+    }
+
+    &__button {
+        max-width: 257px;
+
+        border: none;
+    }
+
+    &__name-wrap {
+        position: relative;
+
+        /* max-width: 390px; */
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    &__name-input {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+
+        width: 100%;
+
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        color: $black;
+        background-color: #f9fbfc;
+        border: 1px solid #D5D5D5;
+    }
+
+    &__phone-wrap {
+        position: relative;
+
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    &__phone-input {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+
+        width: 100%;
+
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        color: $black;
+        background-color: #f9fbfc;
+        border: 1px solid #D5D5D5;
+    }
+
+    &__name-input:focus,
+    &__phone-input:focus {
+        outline: 2px solid $yellow;
+    }
+
+    &__name-label,
+    &__phone-label {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        color: $gray;
+
+        pointer-events: none;
+        transition: all .3s;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.1, 0.99);
+        transition-delay: 0s;
+    }
+
+    &__name-input:focus ~ &__name-label, &__name-input:valid ~ &__name-label,
+    &__phone-input:focus ~ &__phone-label, &__phone-input:valid ~ &__phone-label {
+        top: 10px;
+        font-size: 13px;
+    }
+
+    &__check {
+        margin: 0;
+        margin-bottom: 45px;
+
+        display: flex;
+    }
+
+    &__check-photo {
+        padding: 0;
+
+        text-align: left;
+    }
+
+    &__check-video {
+        padding: 0;
+
+        text-align: left;
+    }
+
+    &__check-label {
+        position: relative;
+
+        margin: 0;
+        padding-left: 25px;
+
+        cursor: pointer;
+    }
+
+    &__check-input + &__check-label::before {
+        position: absolute;
+        content: "";
+
+        left: 0;
+        top: 4px;
+
+        width: 10px;
+        height: 7px;
+
+        padding: 7px;
+
+        border: 1px solid $border-checkbox;
+        border-radius: 2px;
+    }
+
+    &__check-input:checked + &__check-label::before {
+        border: 1px solid transparent;
+
+        background-color: $yellow;
+        background-image: url("../img/main_order-check.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__check-text {
+        font-weight: 500;
+        font-size: 14px;
+        color: $black;
+    }
+}
+
+// mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .order {
+        padding: 0;
+
+        &__container-wrap {
+            padding: 0;
+
+            background: $white;
+        }
+
+        &__content {
+            padding-top: 40px;
+            padding-bottom: 35px;
+
+            top: 0;
+
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+        }
+
+        &__title-wrap {
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            font-size: 26px;
+        }
+
+        &__header-text-wrap {
+            margin-bottom: 15px;
+        }
+
+        &__header-text {
+            font-size: 16px;
+        }
+
+        &__check {
+            padding: 0;
+            margin: auto;
+            margin-bottom: 30px;
+
+            max-width: 390px;
+
+            flex-wrap: nowrap;
+        }
+
+        &__button {
+            max-width: 450px;
+        }
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1279px) {
+    .order {
+        padding-top: 45px;
+
+        &__content {
+            top: -45px;
+        }
+
+        &__container-wrap {
+            padding-left: 25px;
+            padding-right: 25px;
+
+            background-image: url(../img/main_order-bg-mobile.jpg);
+		}
+
+		&__header-text-wrap {
+            margin-bottom: 35px;
+		}
+
+		&__phone-wrap {
+			margin-bottom: 30px;
+		}
+
+        &__check {
+            padding: 0;
+            margin: auto;
+            margin-bottom: 40px;
+
+            max-width: 390px;
+
+            flex-wrap: nowrap;
+		}
+
+		&__button-wrap {
+			margin-bottom: 25px;
+		}
+    }
+}

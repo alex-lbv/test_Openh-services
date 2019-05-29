@@ -1,0 +1,120 @@
+.main-header {
+    padding: 0;
+
+    position: relative;
+    min-height: 560px;
+
+    background-image: url("../img/main_top-bg.jpg");
+    background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+
+    &::before {
+        position: absolute;
+        content: "";
+
+        min-height: 560px;
+        width: 100%;
+
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 39.23%, rgba(0, 0, 0, 0.41) 74.03%);
+        background-size: 100% 100%;
+    }
+
+    &__content {
+        padding-top: 110px;
+        position: relative;
+
+        text-align: center;
+    }
+
+    &__title-wrap {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin: 0;
+
+        font-weight: 400;
+        font-size: 52px;
+        letter-spacing: 0.01em;
+        color: $white;
+
+        text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    &__text-wrap {
+        margin-bottom: 45px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: $white;
+    }
+
+    &__button {
+        max-width: 225px;
+
+        font-size: 14px;
+    }
+}
+
+// mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .main-header {
+        min-height: 370px;
+
+        background-image: url("../img/main_top-bg-mobile.jpg");
+
+        &::before {
+            min-height: 370px;
+        }
+
+        &__content {
+            padding-top: 60px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title-wrap {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            font-size: 26px;
+			line-height: 34px;
+        }
+
+        &__text-wrap {
+            margin: 0 40px;
+            order: 3;
+        }
+
+        &__text {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        &__button-wrap {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1279px) {
+    .main-header {
+        background-image: url("../img/main_top-bg-tablet.jpg");
+
+        &__content {
+            padding-top: 110px;
+        }
+
+        &__title {
+            font-size: 46px;
+        }
+    }
+}

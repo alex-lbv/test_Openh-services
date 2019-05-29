@@ -1,0 +1,541 @@
+.card {
+    padding: 0;
+    margin-right: 34px;
+    margin-bottom: 32px;
+
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 2px;
+
+    &:nth-of-type(3),
+    &:nth-of-type(7) {
+        margin-right: 0;
+    }
+
+    &-advices {
+        cursor: pointer;
+    }
+
+    &-img-top-wrap {
+        position: relative;
+    }
+
+    &-blackout::before {
+        position: absolute;
+        content: "";
+
+        width: 100%;
+        height: 100%;
+
+        background: linear-gradient(359.04deg, rgba(92, 92, 92, 0.72) 13.86%, rgba(97, 97, 97, 0) 90.11%);
+        background-size: 100% 100%;
+        mix-blend-mode: normal;
+    }
+
+    &-img-top {
+        width: 100%;
+        height: 170px;
+    }
+
+    &-title-wrap {
+        margin-bottom: 10px;
+    }
+
+    &-title {
+        margin: 0;
+
+        font-weight: 500;
+        font-size: 26px;
+        color: $black;
+    }
+
+    &-subtitle {
+        margin: 0;
+
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &__date-wrap {
+        align-self: flex-end;
+        text-align: left;
+    }
+
+    &__date {
+        font-size: 14px;
+        color: $gray;
+    }
+
+    &-text-wrap {
+        margin-bottom: 0;
+    }
+
+    &-text {
+        margin: 0;
+
+        font-weight: 300;
+        font-size: 16px;
+        color: $black;
+    }
+
+    &__footer {
+        padding: 0 20px;
+		padding-bottom: 30px;
+
+		flex-wrap: wrap-reverse;
+        align-items: center;
+    }
+
+    &__footer-advices {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        padding-right: 15px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        padding: 15px 20px;
+
+        width: 100%;
+
+        font-size: 12px;
+        text-transform: uppercase;
+
+        &--advices {
+            font-size: 11px;
+        }
+    }
+
+    &__button-wrap--services {
+		width: 100%;
+    }
+
+    &__button-advices-wrap  {
+        opacity: 0;
+        text-align: right;
+    }
+
+    &__button--advices {
+        padding: 8px 18px;
+    }
+
+    &-advices:hover &__button-advices-wrap {
+        opacity: 1;
+    }
+
+    &__price-wrap {
+		text-align: right;
+
+		&--services {
+			white-space: nowrap;
+		}
+	}
+
+    &__price-start {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: $black;
+        text-transform: lowercase;
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 32px;
+        text-align: right;
+        color: $black;
+    }
+
+    &__price-currency {
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    &-1::before {
+        position: absolute;
+        content: "";
+
+        top: 20px;
+        left: 25px;
+
+        width: 93px;
+        height: 93px;
+
+        border-radius: 50px;
+        background-color: $white;
+        background-image: url("../img/main_card-coub.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 46px 50px;
+        z-index: 1;
+    }
+
+    &-1::after   {
+        position: absolute;
+        content: "";
+
+        top: 65px;
+        left: 80px;
+
+        width: 24px;
+        height: 24px;
+
+        border-radius: 50px;
+        background-color: $green;
+        background-image: url("../img/main_card-1-coub.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px 15px;
+        z-index: 2;
+    }
+
+    &-2::after {
+        position: absolute;
+        content: "";
+
+        top: 20px;
+        left: 25px;
+
+        width: 75px;
+        height: 75px;
+
+        border-radius: 50px;
+        background-color: $bg-logo-card-2;
+        background-image: url("../img/main_card-2-coub.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 75px 41px;
+    }
+
+    &-3::after,
+    &-6::after {
+        position: absolute;
+        content: "";
+
+        top: 20px;
+        left: 25px;
+
+        width: 75px;
+        height: 75px;
+
+        border-radius: 50px;
+        background-color: $white;
+        background-image: url("../img/main_card-3-coub.png");
+        background-repeat: no-repeat;
+        background-position: 60% 50%;
+        background-size: 31px 45px;
+    }
+
+    &-4::after,
+    &-5::after,
+    &-6::after {
+        position: absolute;
+        content: "";
+
+        top: 20px;
+        left: 25px;
+
+        width: 70px;
+        height: 70px;
+
+        border-radius: 50px;
+        background-color: $white;
+        background-image: url("../img/main_card-coub.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 35px 37px;
+    }
+
+    &-3::before,
+    &-6::before {
+        position: absolute;
+        content: "";
+
+        padding: 2px;
+
+        top: 0;
+        right: 0;
+
+        width: 141px;
+        height: 143px;
+
+        background-image: url("../img/circle2.png");
+        background-repeat: no-repeat;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    &-sale-wrap {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 2;
+    }
+
+    &-sale {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 28px;
+        text-align: right;
+
+        color: $black;
+    }
+
+    &-sale-number {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 28px;
+
+
+        color: $black;
+    }
+
+    &-advices__arrow {
+        padding: 0 15px;
+
+        position: absolute;
+        top: -14px;
+        left: -10px;
+        z-index: 3;
+
+        background-color: $yellow;
+    }
+
+    &-advices__arrow::before {
+        content: "";
+        position: absolute;
+        right: -11px;
+        top: 9px;
+
+        width: 0;
+        height: 0;
+
+        border-right: 11px solid transparent;
+        border-bottom: 17px solid $yellow;
+    }
+
+    &-advices__arrow::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -11px;
+
+        width: 0;
+        height: 0;
+
+        border-right: 11px solid transparent;
+        border-top: 17px solid $yellow;
+    }
+
+    &-advices__arrow-text {
+        position: relative;
+        font-weight: 800;
+        font-size: 10px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        line-height: 24px;
+
+        color: $black;
+    }
+
+    &-img-advices {
+        position: relative;
+    }
+
+    &-img-advices::before {
+        position: absolute;
+        content: "";
+        left: -10px;
+        top: 2px;
+
+        width: 0;
+        height: 0;
+
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #c4c4c4;
+        z-index: 1;
+    }
+}
+
+// mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .card {
+        margin-right: 0;
+        margin-bottom: 25px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &-1,
+        &-2,
+        &-3,
+        &-4 {
+            display: none;
+        }
+
+        &-6::before,
+        &-sale-wrap {
+            display: none;
+        }
+
+        &-5::after,
+        &-6::after {
+            width: 55px;
+            height: 55px;
+
+            background-size: 30px 30px;
+        }
+
+        &-body {
+           padding: 15px;
+        }
+
+        &-img-top {
+            height: auto;
+        }
+
+        &-title {
+            font-size: 22px;
+        }
+
+        &-text-wrap {
+            margin-bottom: 0;
+        }
+
+        &-text {
+            font-size: 14px;
+        }
+
+        &__footer {
+            padding-bottom: 20px;
+            margin: 0;
+        }
+
+        &-advices {
+            margin-bottom: 30px;
+        }
+
+        &-advices__arrow::before,
+        &-advices__arrow::after {
+            right: -10px;
+        }
+
+        &__button-advices-wrap {
+            opacity: 1;
+		}
+
+        &-6  &__button-wrap,
+        &-5  &__button-wrap {
+			padding: 0;
+		}
+
+        &__footer-advices {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__footer {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+		&__price-wrap {
+			padding: 0;
+		}
+
+		&__price {
+			font-size: 28px;
+		}
+    }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1279px) {
+    .card {
+        margin-right: 0;
+        margin-bottom: 25px;
+
+        &-1,
+        &-2,
+        &-3,
+        &-4 {
+            display: none;
+        }
+
+        &-6::before,
+        &-sale-wrap {
+            display: none;
+        }
+
+        &-5::after,
+        &-6::after {
+            width: 55px;
+            height: 55px;
+
+            background-size: 30px 30px;
+        }
+
+        &__button-advices-wrap {
+            opacity: 1;
+        }
+
+		&-advices-1 {
+			margin-right: 30px;
+		}
+
+		&-advices-1,
+		&-advices-2 {
+			margin-bottom: 40px;
+		}
+
+        &-advices-3 {
+            display: none;
+        }
+
+        &-body {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 30px;
+            padding-right: 15px;
+        }
+
+        &-img-top {
+            height: auto;
+        }
+
+        &-title {
+            font-size: 26px;
+        }
+
+        &-text-wrap {
+            margin-bottom: 0;
+        }
+
+        &-text {
+            font-size: 16px;
+        }
+
+        &__footer {
+            padding-right: 0;
+            padding-left: 15px;
+            padding-bottom: 20px;
+            margin: 0;
+        }
+
+        &__price-wrap {
+            text-align: end;
+		}
+
+		&__price-wrap--services {
+			flex: 2.2;
+		}
+    }
+}
